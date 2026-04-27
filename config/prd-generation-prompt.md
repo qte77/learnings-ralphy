@@ -3,6 +3,7 @@ You are generating a self-improvement PRD from accumulated learnings.
 ## Pre-synthesis
 
 First run these skills to gather context:
+
 1. /cc-meta:distilling-plan-learnings --time-range 7d
 2. /cc-meta:synthesizing-cc-bigpicture --time-range 7d
 
@@ -14,6 +15,7 @@ Also read ai-agents-research/docs/learnings/cross-repo-digest.md for patterns.
 ## Selection
 
 Extract the top 3-5 actionable patterns that are:
+
 - Recurring (appeared in 2+ repos or sessions)
 - NOT yet implemented as skills, rules, or code fixes
 - High impact (saves tokens, prevents errors, or improves quality)
