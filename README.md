@@ -1,39 +1,43 @@
 # learnings-ralphy
 
-> Self-evolving ralph offspring that distills cross-repo operational patterns into TDD-implemented improvements.
+> Self-improvement offspring of the [ralph-loop template](https://github.com/qte77/ralph-loop-cc-tdd-wt-vibe-kanban-template): turns learnings from our own repos into tested improvements for the template.
 
 [![License](https://img.shields.io/badge/license-Apache--2.0-58f4c2.svg)](LICENSE)
 [![Ralphy Weekly Run](https://github.com/qte77/learnings-ralphy/actions/workflows/ralphy-weekly.yaml/badge.svg)](https://github.com/qte77/learnings-ralphy/actions/workflows/ralphy-weekly.yaml)
 
 ## What
 
-- Ingests LEARNINGS.md and AGENT_LEARNINGS.md from across the qte77 estate
-- Synthesizes operational patterns into shippable TDD improvements each week
-- Targets claude-code-plugins skills, polyforge scripts, and ralph adapters
-- Feeds from compound.env paths, Claude Code session data, and ai-agents-research learnings
-- Runs the ralph loop: synthesize -> PRD -> TDD -> writeback
-- Opens a pull request per weekly run with the generated changes
-- Scheduled Thursday 12:00 UTC; supports manual dispatch
+> **Status:** not yet running end to end. The weekly workflow has never succeeded and is disabled; fixes are
+> tracked in [issues](https://github.com/qte77/learnings-ralphy/issues).
+
+- Compounds *how we work*: learnings and agent memories from our repos become improvements to the ralph-loop template
+- Weekly cycle: synthesize → PRD → ralph TDD loop → pull request in this repo
+- Never pushes to the template; good changes are picked back by the owner
+- Sibling of [research-ralphy](https://github.com/qte77/research-ralphy), which does the same for external research
 
 ## How
 
-Ralph runs as a git submodule. The weekly cycle (synthesize -> PRD -> TDD ->
-writeback) is scheduled via `.github/workflows/ralphy-weekly.yaml`. See
-[AGENTS.md](AGENTS.md) for full agent config and conventions.
+```bash
+make ralphy_evolve   # generate PRD from learnings, then run the ralph loop
+```
+
+Feeds, target and constraints: [docs/UserStory.md](docs/UserStory.md). Agent conventions: [AGENTS.md](AGENTS.md).
 
 ## Why
 
-Manual cross-repo learning capture is lossy and ad-hoc. Patterns discovered in
-one repo rarely reach others. This repo automates the distillation cycle: raw
-learnings become structured improvements that ship via PR, compounding quality
-across the estate without manual intervention.
+Learnings captured in one repo rarely reach the tooling every repo starts from. Turning them into tested template
+changes lets improvements compound across every project built on the template. Design:
+[template#32](https://github.com/qte77/ralph-loop-cc-tdd-wt-vibe-kanban-template/issues/32).
 
-## References
+## Refs
 
+- [docs/UserStory.md](docs/UserStory.md)
 - [AGENTS.md](AGENTS.md)
-- [ralph submodule upstream](https://github.com/qte77/ralph-loop-cc-tdd-wt-vibe-kanban-template)
-- [An Open Agentic Coding Harness](https://qte77.github.io/open-agentic-coding-harness/)
+- [ralph-loop template](https://github.com/qte77/ralph-loop-cc-tdd-wt-vibe-kanban-template)
+- [template#32 — self-improvement design](https://github.com/qte77/ralph-loop-cc-tdd-wt-vibe-kanban-template/issues/32)
+- [research-ralphy](https://github.com/qte77/research-ralphy)
 - [ai-agents-research](https://github.com/qte77/ai-agents-research)
+- [An Open Agentic Coding Harness](https://qte77.github.io/open-agentic-coding-harness/)
 
 ## License
 
