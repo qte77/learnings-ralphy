@@ -1,62 +1,43 @@
 # learnings-ralphy
 
-> Self-improvement offspring of the [ralph-loop template](https://github.com/qte77/ralph-loop-cc-tdd-wt-vibe-kanban-template): distills learnings from our own repos and agent sessions into tested improvements for the template.
+> Self-improvement offspring of the [ralph-loop template](https://github.com/qte77/ralph-loop-cc-tdd-wt-vibe-kanban-template): turns learnings from our own repos into tested improvements for the template.
 
 [![License](https://img.shields.io/badge/license-Apache--2.0-58f4c2.svg)](LICENSE)
 [![Ralphy Weekly Run](https://github.com/qte77/learnings-ralphy/actions/workflows/ralphy-weekly.yaml/badge.svg)](https://github.com/qte77/learnings-ralphy/actions/workflows/ralphy-weekly.yaml)
 
-## Status
-
-**Not yet working end to end.** Every scheduled weekly run has failed, and GitHub has disabled the workflow for
-inactivity (last run 2026-08-27). The fixes are tracked in this repo's
-[issues](https://github.com/qte77/learnings-ralphy/issues).
-
 ## What
 
-- **Purpose:** compound *how we work*. Learnings from our own repos and projects become improvements to the
-  ralph-loop template, so every project started from it starts smarter.
-- **Feeds:**
-  - `AGENT_LEARNINGS.md` / `LEARNINGS.md` across our repos
-  - the cross-repo learnings digest in [ai-agents-research](https://github.com/qte77/ai-agents-research)
-  - local Claude Code session memory and plans, via [config/compound.env](config/compound.env). These are
-    local paths, so they are not available on CI runners
-    ([#19](https://github.com/qte77/learnings-ralphy/issues/19)).
-- **Target:** the ralph-loop template.
-- **Cycle:**
-  1. synthesize ([config/prd-generation-prompt.md](config/prd-generation-prompt.md))
-  2. PRD
-  3. ralph TDD loop
-  4. pull request in this repo
-- **Feedback path:** this repo never pushes to the template. Worthwhile changes are picked back into the
-  template by the owner. The design is in
-  [template#32](https://github.com/qte77/ralph-loop-cc-tdd-wt-vibe-kanban-template/issues/32).
-- **Sibling:** [research-ralphy](https://github.com/qte77/research-ralphy) does the same for *what's new*
-  (external research, papers, best practices).
+> **Status:** not yet running end to end. The weekly workflow has never succeeded and is disabled; fixes are
+> tracked in [issues](https://github.com/qte77/learnings-ralphy/issues).
+
+- Compounds *how we work*: learnings and agent memories from our repos become improvements to the ralph-loop template
+- Weekly cycle: synthesize → PRD → ralph TDD loop → pull request in this repo
+- Never pushes to the template; good changes are picked back by the owner
+- Sibling of [research-ralphy](https://github.com/qte77/research-ralphy), which does the same for external research
 
 ## How
 
-- **Weekly cycle:** `.github/workflows/ralphy-weekly.yaml`, Thursday 12:00 UTC plus manual dispatch (currently
-  disabled, see Status).
-- **Locally:** `make ralphy_evolve`, which runs PRD generation, then `ralph_init_loop`, then `ralph_run`.
-- **The template is included as the `ralph` git submodule.** How improvements get from here back into the
-  template (a submodule or a template copy) is still open in
-  [template#32](https://github.com/qte77/ralph-loop-cc-tdd-wt-vibe-kanban-template/issues/32).
-- See [AGENTS.md](AGENTS.md) for agent config and conventions.
+```bash
+make ralphy_evolve   # generate PRD from learnings, then run the ralph loop
+```
+
+Feeds, target and constraints: [docs/UserStory.md](docs/UserStory.md). Agent conventions: [AGENTS.md](AGENTS.md).
 
 ## Why
 
-Learnings captured in one repo rarely reach the tooling every repo starts from. This repo turns accumulated
-learnings into tested changes to the ralph-loop template, so improvements compound across every project built
-on it instead of staying in the repo where they were noticed.
+Learnings captured in one repo rarely reach the tooling every repo starts from. Turning them into tested template
+changes lets improvements compound across every project built on the template. Design:
+[template#32](https://github.com/qte77/ralph-loop-cc-tdd-wt-vibe-kanban-template/issues/32).
 
-## References
+## Refs
 
+- [docs/UserStory.md](docs/UserStory.md)
 - [AGENTS.md](AGENTS.md)
-- [ralph-loop template](https://github.com/qte77/ralph-loop-cc-tdd-wt-vibe-kanban-template) and its
-  [self-improvement design (#32)](https://github.com/qte77/ralph-loop-cc-tdd-wt-vibe-kanban-template/issues/32)
+- [ralph-loop template](https://github.com/qte77/ralph-loop-cc-tdd-wt-vibe-kanban-template)
+- [template#32 — self-improvement design](https://github.com/qte77/ralph-loop-cc-tdd-wt-vibe-kanban-template/issues/32)
 - [research-ralphy](https://github.com/qte77/research-ralphy)
-- [An Open Agentic Coding Harness](https://qte77.github.io/open-agentic-coding-harness/)
 - [ai-agents-research](https://github.com/qte77/ai-agents-research)
+- [An Open Agentic Coding Harness](https://qte77.github.io/open-agentic-coding-harness/)
 
 ## License
 
