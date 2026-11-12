@@ -24,3 +24,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Agent config standardized: `AGENTS.md` as single source with `CLAUDE.md` symlink, shared rules,
   plugin marketplace, Dependabot (#16)
 - `actions/checkout` bumped from v4 to v7 (#17)
+
+### Security
+
+- `actions/checkout` in `ralphy-weekly.yaml` pinned to its full commit SHA; tag refs now fail at
+  workflow startup under the repo's Actions allow-list policy
