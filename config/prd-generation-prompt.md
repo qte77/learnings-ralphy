@@ -24,6 +24,6 @@ Cross-reference with existing cc-utils-plugin skills to avoid duplication.
 
 ## Output
 
-Generate docs/PRD.md following the ralph PRD template at ralph/docs/templates/prd.md.template.
+Generate docs/PRD.md following the ralph PRD template at ralph/ralph/docs/templates/prd.md.template.
 Each pattern becomes a story with acceptance criteria and target files.
-Then run: python ralph/scripts/generate_prd_json.py
+Then run: python ralph/ralph/scripts/generate_prd_json.py ../docs/PRD.md

@@ -18,6 +18,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   template commit in the job summary, and caps the PRD-generation step at `--max-budget-usd 5` with
   `--permission-mode bypassPermissions`, logging `total_cost_usd` to the job summary; the local
   `make ralphy_generate_prd` gets the same flags (#22)
+- `ralph_run` and `ralph_init_loop` now run inside the `ralph/` submodule (`make -C ralph`), since
+  the included `ralph/Makefile`'s recipes use paths relative to the template's own root, and that
+  root is one level deeper here (`ralph/ralph/scripts/...`) than at the superrepo root; same fix in
+  `config/prd-generation-prompt.md`, which now points `generate_prd_json.py` at the double-nested
+  script with `../docs/PRD.md` so it reads this repo's PRD, not the submodule's own (#22)
 
 ### Added
 
