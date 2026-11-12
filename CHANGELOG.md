@@ -23,6 +23,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   root is one level deeper here (`ralph/ralph/scripts/...`) than at the superrepo root; same fix in
   `config/prd-generation-prompt.md`, which now points `generate_prd_json.py` at the double-nested
   script with `../docs/PRD.md` so it reads this repo's PRD, not the submodule's own (#22)
+- `.scaffolds/contrib.sh`'s `adapter_validate` no longer ends in `|| true`: it now fails when the
+  target repo's `make validate`/`make test` fails, and errors clearly when neither target exists,
+  instead of silently passing. Added `.scaffolds/contrib.test.sh` (RED-GREEN, no CI wiring yet).
+  The template's own `make validate` always exiting 0
+  ([template#90](https://github.com/qte77/ralph-loop-cc-tdd-wt-vibe-kanban-template/issues/90)) is a
+  separate upstream issue, not fixed here (#22)
 
 ### Added
 
