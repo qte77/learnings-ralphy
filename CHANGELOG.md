@@ -24,6 +24,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Agent config standardized: `AGENTS.md` as single source with `CLAUDE.md` symlink, shared rules,
   plugin marketplace, Dependabot (#16)
 - `actions/checkout` bumped from v4 to v7 (#17)
+- `.github/dependabot.yml` groups `github-actions` updates into
+  `actions-security-updates` and `actions-version-updates` (minor/patch)
 
 ### Security
 
