@@ -11,6 +11,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- `ralphy-weekly.yaml` configures a `github-actions[bot]` git identity before the submodule commit
+  (every run failed with `empty ident name`), pins the Claude Code install to `2.1.310`, records the
+  template commit in the job summary, and caps the PRD-generation step at `--max-budget-usd 5` with
+  `--permission-mode bypassPermissions`, logging `total_cost_usd` to the job summary; the local
+  `make ralphy_generate_prd` gets the same flags (#22)
+
 ### Added
 
 - `CHANGELOG.md` in Keep a Changelog format (#23)
