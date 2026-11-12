@@ -20,7 +20,7 @@ Extract the top 3-5 actionable patterns that are:
 - NOT yet implemented as skills, rules, or code fixes
 - High impact (saves tokens, prevents errors, or improves quality)
 
-Cross-reference with existing cc-utils-plugin skills to avoid duplication.
+Cross-reference with the ralph-loop template to avoid duplication.
 
 ## Output
 

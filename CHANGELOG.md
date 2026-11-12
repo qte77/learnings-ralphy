@@ -29,6 +29,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   The template's own `make validate` always exiting 0
   ([template#90](https://github.com/qte77/ralph-loop-cc-tdd-wt-vibe-kanban-template/issues/90)) is a
   separate upstream issue, not fixed here (#22)
+- `config/prd-generation-prompt.md`'s Selection step named a stale target (`cc-utils-plugin`
+  skills) instead of the ralph-loop template, which `docs/UserStory.md` and
+  [template#32](https://github.com/qte77/ralph-loop-cc-tdd-wt-vibe-kanban-template/issues/32) name
+  as the only target (#22)
 
 ### Added
 
