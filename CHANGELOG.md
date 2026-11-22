@@ -40,6 +40,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Claude Code `.claude/settings.json` sets `BASH_MAX_OUTPUT_LENGTH` to `15000` and
+  `CLAUDE_AUTOCOMPACT_PCT_OVERRIDE` to `50` ([docs](https://code.claude.com/docs/en/env-vars))
 - `AGENTS.md` asks for a CHANGELOG entry on non-trivial changes (#23)
 - README, `AGENTS.md` and `docs/UserStory.md` retarget the repo to the ralph-loop template as its
   self-improvement offspring and state current status (#21)
